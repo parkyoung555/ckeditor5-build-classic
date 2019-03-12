@@ -53,7 +53,51 @@ module.exports = {
 		new webpack.BannerPlugin( {
 			banner: bundler.getLicenseBanner(),
 			raw: true
-		} )
+		} ),
+		new webpack.NormalModuleReplacementPlugin(
+			/bold\.svg/,
+			require.resolve( './icons/bold.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/bulletedlist\.svg/,
+			require.resolve( './icons/bulletedlist.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/image\.svg/,
+			require.resolve( './icons/image.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/italic\.svg/,
+			require.resolve( './icons/italic.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/link\.svg/,
+			require.resolve( './icons/link.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/media\.svg/,
+			require.resolve( './icons/media.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/numberedlist\.svg/,
+			require.resolve( './icons/numberedlist.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/quote\.svg/,
+			require.resolve( './icons/quote.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/redo\.svg/,
+			require.resolve( './icons/redo.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/table\.svg/,
+			require.resolve( './icons/table.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
+			/undo\.svg/,
+			require.resolve( './icons/undo.svg' )
+		)
 	],
 
 	module: {
