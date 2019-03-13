@@ -63,6 +63,10 @@ module.exports = {
 			require.resolve( './icons/bulletedlist.svg' )
 		),
 		new webpack.NormalModuleReplacementPlugin(
+			/pencil\.svg/,
+			require.resolve( './icons/edit.svg' )
+		),
+		new webpack.NormalModuleReplacementPlugin(
 			/image\.svg/,
 			require.resolve( './icons/image.svg' )
 		),
